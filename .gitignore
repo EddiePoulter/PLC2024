@@ -1,9 +1,14 @@
 **/dist-newstyle
 **/.stack-work
-**/.classpath 
+**/.classpath
 **/.project
 **/.settings
 **/target
 **/obj
 *.lock
 
+**/*.ada
+**/*.out
+**/*.o
+**/*.class
+**/*.ali
