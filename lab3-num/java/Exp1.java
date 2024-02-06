@@ -3,13 +3,13 @@ import java.util.InputMismatchException;
 
 public class Exp1
 {
-    
+
     private static int getInteger(String varName)
     {
         boolean haveResult = false;
         int result = 0;
         Scanner stdin = new Scanner(System.in);
-        
+
         while ( ! haveResult )
         {
             System.out.print("Input an integer number " + varName + " = ");
@@ -32,16 +32,16 @@ public class Exp1
                 }
             }
         }
-        
+
         return result;
     }
-    
+
     private static float getFloat(String varName)
     {
         boolean haveResult = false;
         float result = 0;
         Scanner stdin = new Scanner(System.in);
-        
+
         while ( ! haveResult )
         {
             System.out.print("Input a floating point number " + varName + " = ");
@@ -55,17 +55,17 @@ public class Exp1
                 System.out.println("Not a valid number.");
             }
         }
-        
+
         return result;
     }
-    
+
     private static float exp1(float a, float b)
     {
         float result =
-            a + b * (- a + 1/b);
+            1 + ((a + b) * (a - (1 / b)));
         return result;
     }
-  
+
     public static void main(String[] args)
     {
         System.out.println
