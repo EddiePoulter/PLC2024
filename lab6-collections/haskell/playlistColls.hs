@@ -10,8 +10,8 @@ data Product
         }
     deriving (Eq)
 
-instance Show Product where 
-    show (Product name brand) = 
+instance Show Product where
+    show (Product name brand) =
         printf "%s by %s" name brand
 
 data Item
@@ -55,9 +55,9 @@ playlist2 = [piece2, advert1]
 
 playlists = [playlist1, playlist2] -- a list of lists
 
-adsFromPlaylists = "todo" -- TASK 6.4(b)
+adsFromPlaylists = [ j | i <- playlists, j <- i, isAdvert j]
 
-shortItemLenghts1 = "todo" -- TASK 6.4(a)
+shortItemLenghts1 = [ item_length_secs i | i <- playlist1, item_length_secs i < 20]
 
 main =
     do
